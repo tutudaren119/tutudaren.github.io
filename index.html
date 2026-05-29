@@ -292,10 +292,94 @@
   .gallery-modal-close:active{
     background:rgba(255,255,255,.25);
   }
-  .gallery-modal-placeholder{
+.gallery-modal-placeholder{
     color:rgba(255,255,255,.7);
     font-size:4em;
     margin-bottom:12px;
+  }
+
+  /* ===== 轮播弹窗样式 ===== */
+  .gallery-carousel{
+    position:relative;
+    width:100%;
+    max-width:600px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  .gallery-carousel-img{
+    width:100%;
+    max-height:60vh;
+    object-fit:contain;
+    border-radius:12px;
+    transition:opacity .3s;
+    box-shadow:0 10px 40px rgba(0,0,0,.4);
+  }
+  .gallery-carousel-nav{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    margin-top:12px;
+  }
+  .gallery-carousel-btn{
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    background:rgba(255,255,255,.2);
+    color:#fff;
+    border:none;
+    font-size:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    backdrop-filter:blur(4px);
+    -webkit-backdrop-filter:blur(4px);
+    transition:background .2s;
+  }
+  .gallery-carousel-btn:active{
+    background:rgba(255,255,255,.35);
+  }
+  .gallery-carousel-dots{
+    display:flex;
+    gap:6px;
+  }
+  .gallery-carousel-dot{
+    width:8px;height:8px;
+    border-radius:50%;
+    background:rgba(255,255,255,.4);
+    cursor:pointer;
+    transition:all .2s;
+  }
+  .gallery-carousel-dot.active{
+    background:#fff;
+    width:20px;
+    border-radius:4px;
+  }
+  .gallery-carousel-counter{
+    color:rgba(255,255,255,.7);
+    font-size:.85em;
+    margin-top:8px;
+  }
+
+  /* 轮播卡片角标 */
+  .gallery-card-multi .gallery-thumb{
+    position:relative;
+  }
+  .gallery-card-multi::after{
+    content:"▶ 轮播";
+    position:absolute;
+    top:8px;right:8px;
+    background:rgba(0,0,0,.6);
+    color:#fff;
+    padding:4px 10px;
+    border-radius:12px;
+    font-size:.75em;
+    font-weight:600;
+    backdrop-filter:blur(4px);
+    -webkit-backdrop-filter:blur(4px);
+    pointer-events:none;
+    z-index:2;
   }
   
   /* 页脚 */
@@ -770,31 +854,23 @@
   <p style="font-size:.85em;color:var(--muted);margin-bottom:16px;">点击任意卡片查看该景点的拍照参考案例，绿色圆点表示已有样片。</p>
   
   <div class="gallery-grid">
-    <!-- 有案例的景点 -->
-    <div class="gallery-card" onclick="openGallery('赛里木湖', 'https://kimi-web-img.moonshot.cn/img/image.cns.com.cn/cbf96db72ae9fffd9d2e0164625d0e4d78cfc054.jpg', '大西洋最后一滴眼泪，湖水随光线呈现不同层次的蓝。建议航拍或环湖路亲水滩低角度拍摄。')">
-      <img class="gallery-thumb" src="https://kimi-web-img.moonshot.cn/img/image.cns.com.cn/cbf96db72ae9fffd9d2e0164625d0e4d78cfc054.jpg" alt="赛里木湖">
-      <div class="gallery-info">
-        <div class="gallery-name">赛里木湖</div>
-        <div class="gallery-tag"><span class="dot has-img"></span> 已有样片 · Day 6-7</div>
-      </div>
-    </div>
-    
-    <div class="gallery-card" onclick="openGallery('禾木村', 'https://kimi-web-img.moonshot.cn/img/p7.itc.cn/46d7079df497e97f6bc76dc3f84015616c94c67a.jpeg', '图瓦人原木村落，夏季绿意盎然。观景台俯瞰全村，晨雾与炊烟是最佳拍摄时机。')">
-      <img class="gallery-thumb" src="https://kimi-web-img.moonshot.cn/img/p7.itc.cn/46d7079df497e97f6bc76dc3f84015616c94c67a.jpeg" alt="禾木村">
-      <div class="gallery-info">
-        <div class="gallery-name">禾木村</div>
-        <div class="gallery-tag"><span class="dot has-img"></span> 已有样片 · Day 3-4</div>
-      </div>
-    </div>
-    
-    <!-- 以下为空，等你后期补图 -->
-    <div class="gallery-card" onclick="openGallery('乌鲁木齐·国际大巴扎', '', '阿凡提馕坑雕塑框景，黄金光线时段打卡，适合俏皮互动照。')">
-      <div class="gallery-thumb placeholder">🖼️ 暂无案例</div>
+  <!-- 以下为空，等你后期补图 -->
+    <div class="gallery-card gallery-card-multi" onclick="openGallery('乌鲁木齐·国际大巴扎', [{url:'新疆.jpg',desc: '疆来城网红墙，两人错身而过'},
+{url:'大巴扎女生.jpg',desc: '进西门广场就能看到，蹲下仰拍与人物同框,滤镜后期'},
+{url:'建筑群.png',desc: '进西门广场就能看到，蹲下仰拍与人物同框,滤镜后期'},
+{url:'文化墙.png',desc: '乌鲁木齐市文化中心，乌鲁木齐文化新地标六馆一心'},
+{url:'空中下午茶.jpg',desc: '推荐直接找一个空中下午茶店，然后好好拍照，因为大巴扎人会比较多，白天人少，但是到了下午开始人会特别多，不太能避开人群！'},
+{url:'乌鲁木齐雅山.jpg',desc: '打车到新疆维吾尔自治区乌鲁木齐市沙依巴克区高山路151号，爬20分钟一直爬到一个土堆上，旁边有个电塔，天气不好，掉头就走'},
+{url:'二道桥清真寺屋顶.jpg',desc: '3号楼与4号楼中间位，往后走一点框景构图，很浓郁的伊斯兰异域风情'},
+{url:'楼顶的阿凡提.jpg',desc: '主街、馕雕塑借位大巴扎最大的地标阿凡提，各种造型的雕塑都有，屋顶上'}
+],'阿凡提馕坑雕塑框景，黄金光线时段打卡，适合俏皮互动照。')">
+      <img class="gallery-thumb" src="新疆.jpg" alt="乌鲁木齐·国际大巴扎">
       <div class="gallery-info">
         <div class="gallery-name">乌鲁木齐·国际大巴扎</div>
-        <div class="gallery-tag"><span class="dot"></span> 待补充 · Day 1</div>
+        <div class="gallery-tag"><span class="dot has-img"></span> 已有样片 · Day 1</div>
       </div>
     </div>
+
     
     <div class="gallery-card" onclick="openGallery('S21沙漠公路', '', '穿越古尔班通古特沙漠，沿途可停车航拍沙漠风光。')">
       <div class="gallery-thumb placeholder">🖼️ 暂无案例</div>
@@ -819,6 +895,15 @@
         <div class="gallery-tag"><span class="dot"></span> 待补充 · Day 3</div>
       </div>
     </div>
+    
+    <div class="gallery-card" onclick="openGallery('禾木村', 'https://kimi-web-img.moonshot.cn/img/p7.itc.cn/46d7079df497e97f6bc76dc3f84015616c94c67a.jpeg', '案例')">
+      <img class="gallery-thumb" src="https://kimi-web-img.moonshot.cn/img/p7.itc.cn/46d7079df497e97f6bc76dc3f84015616c94c67a.jpeg" alt="禾木村">
+      <div class="gallery-info">
+        <div class="gallery-name">禾木村</div>
+        <div class="gallery-tag"><span class="dot has-img"></span> 已有样片 · Day 3-4</div>
+      </div>
+    </div>
+    
     
     <div class="gallery-card" onclick="openGallery('禾木晨雾', '', '最经典画面，日出后1小时内晨雾消散，需早起占位。')">
       <div class="gallery-thumb placeholder">🖼️ 暂无案例</div>
@@ -860,6 +945,19 @@
       </div>
     </div>
     
+    <!-- 有案例的景点 -->
+    <!-- 轮播示例：赛里木湖（3张） -->
+
+
+    <div class="gallery-card gallery-card-multi" onclick="openGallery('赛里木湖', 'https://kimi-web-img.moonshot.cn/img/image.cns.com.cn/cbf96db72ae9fffd9d2e0164625d0e4d78cfc054.jpg,https://kimi-web-img.moonshot.cn/img/www.xinjiang888.com/d8ae35f48426a2bedaeafc04f3532ee42cdf7e70.jpg,https://kimi-web-img.moonshot.cn/img/www.xj.news.cn/2f0bb0c1abf034a1fa6f9dc16c85e79d54a81e04.JPG', '案例。')">
+      <img class="gallery-thumb" src="https://kimi-web-img.moonshot.cn/img/image.cns.com.cn/cbf96db72ae9fffd9d2e0164625d0e4d78cfc054.jpg" alt="赛里木湖">
+      <div class="gallery-info">
+        <div class="gallery-name">赛里木湖</div>
+        <div class="gallery-tag"><span class="dot has-img"></span> 已有样片 · Day 6-7</div>
+      </div>
+    </div>
+
+  
     <div class="gallery-card" onclick="openGallery('果子沟大桥', '', '新疆最高大桥，桥面距谷底200米，观景台可停车拍摄。')">
       <div class="gallery-thumb placeholder">🖼️ 暂无案例</div>
       <div class="gallery-info">
@@ -1135,7 +1233,7 @@
 
 <div class="footer">
   <p>🌄 初见新疆 · 北疆环线10日尊享攻略</p>
-  <p>2026.8.14 — 8.23 | 上海出发 | 11人同行</p>
+  <p>2026.8.14 — 8.23 | 上海出发 | 16人同行</p>
   <p style="margin-top:8px;font-size:.75em">祝旅途愉快，满载而归！</p>
 </div>
 
@@ -1203,25 +1301,94 @@ document.querySelectorAll('.collapsible').forEach((col, index) => {
   }
 });
 
+
 // ===== 照片墙弹窗逻辑 =====
-function openGallery(name, imgUrl, desc) {
+let galleryCarouselIndex = 0;
+let galleryCarouselImages = [];
+let galleryCarouselDescs = [];
+
+function openGallery(name, imgInput, desc) {
   const modal = document.getElementById('galleryModal');
   const content = document.getElementById('galleryModalContent');
-  
-  if (imgUrl) {
-    content.innerHTML = 
-      '<img src="' + imgUrl + '" alt="' + name + '">' +
-      '<div class="gallery-modal-caption">' + name + '</div>' +
-      '<div class="gallery-modal-desc">' + desc + '</div>';
-  } else {
+
+  let images = [];
+  let descs = [];
+
+  // 支持两种传参方式：
+  // 1. 单字符串：逗号分隔多张图URL，共用同一段desc
+  // 2. 对象数组：[{url:'xxx', desc:'xxx'}, ...]
+  if (Array.isArray(imgInput)) {
+    if (imgInput.length > 0 && typeof imgInput[0] === 'object') {
+      // 对象数组模式
+      images = imgInput.map(function(item){ return item.url; });
+      descs = imgInput.map(function(item){ return item.desc || desc; });
+    } else {
+      // 字符串数组模式
+      images = imgInput;
+      descs = images.map(function(){ return desc; });
+    }
+  } else if (typeof imgInput === 'string' && imgInput.includes(',')) {
+    images = imgInput.split(',').map(function(s){ return s.trim(); }).filter(Boolean);
+    descs = images.map(function(){ return desc; });
+  } else if (imgInput) {
+    images = [imgInput];
+    descs = [desc];
+  }
+
+  galleryCarouselImages = images;
+  galleryCarouselDescs = descs;
+  galleryCarouselIndex = 0;
+
+  if (images.length === 0) {
     content.innerHTML = 
       '<div class="gallery-modal-placeholder">🖼️</div>' +
       '<div class="gallery-modal-caption">' + name + '</div>' +
       '<div class="gallery-modal-desc">暂无拍照案例，请后期补充图片。<br>提示：' + desc + '</div>';
+  } else if (images.length === 1) {
+    content.innerHTML = 
+      '<img src="' + images[0] + '" alt="' + name + '">' +
+      '<div class="gallery-modal-caption">' + name + '</div>' +
+      '<div class="gallery-modal-desc">' + descs[0] + '</div>';
+  } else {
+    content.innerHTML = 
+      '<div class="gallery-carousel">' +
+        '<img class="gallery-carousel-img" id="carouselImg" src="' + images[0] + '" alt="' + name + '">' +
+        '<div class="gallery-carousel-counter" id="carouselCounter">1 / ' + images.length + '</div>' +
+        '<div class="gallery-carousel-nav">' +
+          '<button class="gallery-carousel-btn" onclick="carouselPrev(event)">‹</button>' +
+          '<div class="gallery-carousel-dots" id="carouselDots">' + images.map(function(_,i){ 
+            return '<span class="gallery-carousel-dot ' + (i===0?'active':'') + '" onclick="carouselGo(' + i + ',event)"></span>';
+          }).join('') + '</div>' +
+          '<button class="gallery-carousel-btn" onclick="carouselNext(event)">›</button>' +
+        '</div>' +
+        '<div class="gallery-modal-caption" style="margin-top:12px;">' + name + '</div>' +
+        '<div class="gallery-modal-desc" id="carouselDesc">' + descs[0] + '</div>' +
+      '</div>';
   }
-  
+
   modal.classList.add('show');
   document.body.style.overflow = 'hidden';
+}
+
+function carouselPrev(e) { if(e) e.stopPropagation(); carouselGo(galleryCarouselIndex - 1); }
+function carouselNext(e) { if(e) e.stopPropagation(); carouselGo(galleryCarouselIndex + 1); }
+
+function carouselGo(index, e) {
+  if (e) e.stopPropagation();
+  if (!galleryCarouselImages.length) return;
+  if (index < 0) index = galleryCarouselImages.length - 1;
+  if (index >= galleryCarouselImages.length) index = 0;
+  galleryCarouselIndex = index;
+
+  var img = document.getElementById('carouselImg');
+  var counter = document.getElementById('carouselCounter');
+  var descEl = document.getElementById('carouselDesc');
+  var dots = document.querySelectorAll('.gallery-carousel-dot');
+
+  if (img) img.src = galleryCarouselImages[index];
+  if (counter) counter.textContent = (index + 1) + ' / ' + galleryCarouselImages.length;
+  if (descEl) descEl.textContent = galleryCarouselDescs[index];
+  dots.forEach(function(d, i){ d.classList.toggle('active', i === index); });
 }
 
 function closeGalleryModal(e) {
@@ -1243,3 +1410,4 @@ document.body.style.paddingBottom = navHeight + 'px';
 
 </body>
 </html>
+
