@@ -196,15 +196,6 @@
     padding:14px;
     margin:10px 0;
   }
-  .photo-guide .gallery-grid{
-    margin:0;
-  }
-  .photo-guide .gallery-card{
-    border:1px solid rgba(136,14,79,.15);
-  }
-  .photo-guide .gallery-thumb{
-    border-radius:8px;
-  }
   .photo-guide h5{
     color:#880e4f;
     font-size:.95em;
@@ -686,7 +677,14 @@
   <div class="badge-wrap">
     <span class="badge b-temp">🌡️ 15-28°C</span>
     <span class="badge b-time">⏱️ 推荐15:30-21:30</span>
-    <span class="badge b-nav">🗺️ 市区半日游</span>
+    <span class="badge b-nav">✈️机场→🏨酒店→🍜羊村小馆→🏛️博物馆→🕌大巴扎→🌃和田二街</span>
+  </div>
+  <!-- 今日路线概览 -->
+  <div style="background:linear-gradient(135deg,#e3f2fd,#bbdefb);border-radius:10px;padding:12px 14px;margin:10px 0 14px;border-left:4px solid var(--primary);">
+    <div style="font-size:.8em;font-weight:700;color:var(--primary);margin-bottom:6px;">📍 今日路线</div>
+    <div style="font-size:.78em;color:var(--text);line-height:1.8;">
+      ✈️ 12:00 抵达乌鲁木齐 → 🏨 13:00 酒店入住 → 🍜 14:00 羊村小馆午餐 → 🏛️ 15:30 新疆博物馆看干尸 → 🕌 18:00 大巴扎拍照打卡 → 🌃 20:00 和田二街夜市晚餐
+    </div>
   </div>
   <div class="timeline">
     <div class="t-item">
@@ -708,37 +706,43 @@
     </div>
 
     <div class="t-item">
-      <div class="t-time"><span class="icon">🍜</span> 14:00-15:30 午餐</div>
-      <div class="restaurant-grid">
-        <div class="restaurant-card">
-          <h5>楼兰秘烤（七道湾店）<span class="price-tag">¥80-120/人</span></h5>
-          <p>📍 水磨沟区七道湾南路1215号南湖创造园内</p>
-          <div class="menu">🍽️ 推荐：楼兰小烤肉、楼兰尕羊排、楼兰烤包子、楼兰油包肝、签子肉</div>
-          <p>🚗 距酒店约4km，打车15分钟</p>
-          <span class="book-tag book-need">⚠️ 建议提前电话预约包厢（16人）</span>
-          <a class="nav-link" href="https://ditu.amap.com/search?query=楼兰秘烤七道湾店" target="_blank" style="margin-top:6px;">🗺️ 高德导航</a>
+      <div class="t-time"><span class="icon">🍜</span> 14:00-15:30 午餐 · 相约·羊村小馆</div>
+            <div class="restaurant-grid">
+        <div class="restaurant-card" style="grid-column:1 / -1;">
+          <h5>相约·羊村小馆（新疆博物馆店）<span class="price-tag">¥70-100/人</span></h5>
+          <p>📍 沙依巴克区南昌路9号德锦永盛2楼（近新疆博物馆）</p>
+          <p>☎️ 电话：(0991) 556-6331</p>
+          <div class="menu" style="line-height:1.9;">
+            <b style="color:var(--primary);display:block;margin-bottom:4px;">🍽️ 必吃推荐菜单</b>
+            🥇 羊村手抓肉（送羊肉汤）　　🥇 阿克苏苹果辣子鸡<br>
+            🍢 原始羊肉串（奶香味）　　　　🥟 薄皮包子（皮薄汤多）<br>
+            🐑 和田风味油包肝　　　　　　　🌶️ 罗布人火爆羊肚<br>
+            🍖 秘制麻辣手工羊蹄　　　　　　🍮 无花果酱酸奶盆栽（首创）<br>
+            🥗 野沙葱炒鹅蛋　　　　　　　　🫔 佛手浇汁袈裟
+          </div>
+          <p>🚗 距酒店约6km，打车20分钟；吃完步行5分钟即到博物馆</p>
+          <span class="book-tag book-need">⚠️ 2024-2025连续两年必吃榜，建议电话预约包厢（16人）</span>
+          <a class="nav-link" href="https://ditu.amap.com/search?query=相约羊村小馆南昌路" target="_blank" style="margin-top:6px;">🗺️ 高德导航</a>
         </div>
-        <div class="restaurant-card">
-          <h5>相约·羊村小馆（南湖店）<span class="price-tag">¥70-100/人</span></h5>
-          <p>📍 水磨沟区南湖南路东四巷附近</p>
-          <div class="menu">🍽️ 推荐：羊村手抓肉、巴里坤羊肉卷饼、原味羊肉串、烤包子</div>
-          <p>🚗 距酒店约1.5km，步行15分钟/打车5分钟</p>
-          <span class="book-tag book-no">✅ 无需预约，大厅可拼桌</span>
-          <a class="nav-link" href="https://ditu.amap.com/search?query=相约羊村小馆乌鲁木齐" target="_blank" style="margin-top:6px;">🗺️ 高德导航</a>
+        <div class="restaurant-card" style="opacity:.9;">
+          <h5>🍽️ 点菜建议</h5>
+          <p>16人建议全菜单各点一份</p>
+          <div class="menu">📝 招牌必点：手抓肉+苹果辣子鸡，薄皮包子要趁热</div>
+          <p>⏰ 营业时间：11:00-23:00</p>
+          <span class="book-tag book-no">✅ 近博物馆，步行5分钟即达</span>
         </div>
-        <div class="restaurant-card">
-          <h5>海尔巴格一甸茶餐厅（团结路店）<span class="price-tag">¥60-90/人</span></h5>
-          <p>📍 天山区团结路街道团结路428号高级中学旁</p>
-          <div class="menu">🍽️ 推荐：胡辣羊蹄、过油肉拌面、辣皮子拌面、羊肉串、手抓饭</div>
-          <p>🚗 距酒店约6km，打车20分钟</p>
-          <span class="book-tag book-need">⚠️ 16人建议提前订位</span>
-          <a class="nav-link" href="https://ditu.amap.com/search?query=海尔巴格一甸茶餐厅团结路店" target="_blank" style="margin-top:6px;">🗺️ 高德导航</a>
+        <div class="restaurant-card" style="opacity:.9;">
+          <h5>🚶 饭后安排</h5>
+          <p>羊村小馆 → 新疆博物馆</p>
+          <div class="menu">📍 步行约5分钟 | 🏛️ 博物馆15:30入场</div>
+          <p>⚠️ 博物馆周一闭馆，提前小程序预约</p>
+          <span class="book-tag book-no">✅ 无需打车，消食+顺路</span>
         </div>
       </div>
     </div>
 
     <div class="t-item">
-      <div class="t-time"><span class="icon">🏛️</span> 16:00-18:00 新疆维吾尔自治区博物馆</div>
+      <div class="t-time"><span class="icon">🏛️</span> 15:30-17:30 新疆维吾尔自治区博物馆</div>
       <p>国家一级博物馆，镇馆之宝"五星出东方利中国"锦护膊。必看《新疆古代干尸展览》（楼兰女尸距今3800年）。</p>
       <div class="spot-card">
         <h5>📍 新疆维吾尔自治区博物馆</h5>
@@ -759,7 +763,7 @@
     </div>
 
     <div class="t-item">
-      <div class="t-time"><span class="icon">🕌</span> 18:30-21:30 国际大巴扎</div>
+      <div class="t-time"><span class="icon">🕌</span> 18:00-20:00 国际大巴扎拍照打卡</div>
       <p>世界规模最大的伊斯兰风情巴扎，80米高观光塔俯瞰全景。蓝调雕花穹顶极具辨识度，傍晚光线最佳。</p>
       <div class="spot-card">
         <h5>📍 新疆国际大巴扎</h5>
@@ -768,7 +772,7 @@
         <a class="nav-link" href="https://ditu.amap.com/search?query=新疆国际大巴扎" target="_blank">🗺️ 高德导航</a>
       </div>
       <div class="photo-guide">
-        <h5>📸 打卡案例 & 样片</h5>
+        <h5>📸 拍照指南</h5>
         <ul class="spot-list">
           <li>4号楼东门"演艺大剧院"门头：网红机位，蹲下仰拍与人物同框</li>
           <li>观光塔5楼天台：门票30元，俯瞰全巴扎全景，日落时分绝美</li>
@@ -778,48 +782,42 @@
         </ul>
         <div class="outfit">👗 衣着推荐：民族风长裙（红/宝蓝/墨绿）或波西米亚风，配大耳环和头巾，与伊斯兰建筑形成色彩对比</div>
         <div class="pose">🤳 姿势推荐：旋转裙摆（动态感）、倚靠雕花门框（层次感）、双手举过头顶比框（俏皮感）、背影走向拱门（故事感）</div>
-      
-    <div style="margin-top:10px;padding-top:10px;border-top:1px dashed rgba(136,14,79,.2);">
-      <div style="font-size:.85em;font-weight:700;color:#880e4f;margin-bottom:8px;">📷 参考样片</div>
-      <div class="gallery-grid" style="grid-template-columns:1fr 1fr;gap:8px;">
-        <div class="gallery-card gallery-card-multi" style="box-shadow:0 1px 4px rgba(0,0,0,.08);" onclick="openGallery('乌鲁木齐·国际大巴扎', [{url:'https://s41.ax1x.com/2026/05/30/pmklaXF.webp',desc:'疆来城网红墙，两人错身而过'},{url:'https://s41.ax1x.com/2026/05/30/pmklNlT.webp',desc:'进西门广场就能看到，蹲下仰拍与人物同框,滤镜后期'},{url:'https://img.cdn1.vip/i/6a19c73c84ecb_1780074300.webp',desc:'乌鲁木齐市文化中心，乌鲁木齐文化新地标六馆一心'},{url:'dayone/skytea.webp',desc:'推荐直接找一个空中下午茶店，然后好好拍照，因为大巴扎人会比较多，白天人少，但是到了下午开始人会特别多，不太能避开人群！'},{url:'https://s41.ax1x.com/2026/05/30/pmklU6U.webp',desc:'打车到新疆维吾尔自治区乌鲁木齐市沙依巴克区高山路151号，爬20分钟一直爬到一个土堆上，旁边有个电塔，天气不好，掉头就走'},{url:'dayone/ower.webp',desc:'3号楼与4号楼中间位，往后走一点框景构图，很浓郁的伊斯兰异域风情'},{url:'dayone/adanti.webp',desc:'主街、馕雕塑借位大巴扎最大的地标阿凡提，各种造型的雕塑都有，屋顶上'}],'阿凡提馕坑雕塑框景，黄金光线时段打卡，适合俏皮互动照。')">
-          <img class="gallery-thumb" src="dayone/xinjiang.webp" alt="乌鲁木齐·国际大巴扎" style="height:100px;">
-          <div class="gallery-info" style="padding:8px 10px 10px;">
-            <div class="gallery-name" style="font-size:.85em;">国际大巴扎</div>
-            <div class="gallery-tag"><span class="dot has-img"></span> 7张样片</div>
-          </div>
-        </div>
       </div>
-    </div>
-  </div>
     </div>
 
     <div class="t-item">
-      <div class="t-time"><span class="icon">🍜</span> 21:30-22:30 晚餐（大巴扎周边）</div>
-      <div class="restaurant-grid">
+      <div class="t-time"><span class="icon">🌃</span> 20:00-22:00 和田二街夜市逛吃</div>
+            <div class="restaurant-grid">
         <div class="restaurant-card">
-          <h5>喀什一把抓<span class="price-tag">¥25-40/人</span></h5>
-          <p>📍 天山区领馆巷（大巴扎步行10分钟）</p>
-          <div class="menu">🍽️ 推荐：烤包子3元/个、一把抓（烤包子变种）、薄皮包子</div>
-          <p>🚗 大巴扎步行可达</p>
-          <span class="book-tag book-no">✅ 无需预约，路边小店</span>
-          <a class="nav-link" href="https://ditu.amap.com/search?query=喀什一把抓领馆巷" target="_blank" style="margin-top:6px;">🗺️ 高德导航</a>
+          <h5>和田二街夜市美食组合<span class="price-tag">¥30-60/人</span></h5>
+          <p>📍 天山区和田二街（领馆巷附近）</p>
+          <div class="menu" style="line-height:1.9;">
+            <b style="color:var(--primary);display:block;margin-bottom:4px;">🍢 推荐逛吃路线（按顺序）</b>
+            1️⃣ 努日曼无花果抓饭 ¥25-35 · 肉抓饭+薄皮包子（每天四锅，晚则无）<br>
+            2️⃣ 喀什一把抓 ¥15-25 · 烤包子3元/个+一把抓，趁热吃<br>
+            3️⃣ 艾力江和田馕坑烤肉 ¥40-60 · 馕坑肉+羊肉串+手抓饭<br>
+            4️⃣ 伊孜海迩冰淇淋 ¥15-20 · 古法手工冰淇淋+酸奶粽子（饭后甜品）<br>
+            5️⃣ 路边卡瓦斯 ¥5-10/杯 · 蜂蜜发酵饮料，解腻神器
+          </div>
+          <p>🚗 从大巴扎打车约15分钟 | ⏰ 最佳时段：19:30-22:00</p>
+          <p>💡 建议每家少点多吃，4-5人分一份，可以多尝几家</p>
+          <span class="book-tag book-no">✅ 无需预约，沿街逛吃</span>
+          <a class="nav-link" href="https://ditu.amap.com/search?query=和田二街美食" target="_blank" style="margin-top:6px;">🗺️ 高德导航</a>
         </div>
         <div class="restaurant-card">
-          <h5>艾力江和田馕坑烤肉<span class="price-tag">¥40-60/人</span></h5>
-          <p>📍 天山区领馆巷</p>
-          <div class="menu">🍽️ 推荐：馕坑肉、羊肉串、手抓饭、烤羊排</div>
-          <p>🚗 大巴扎步行可达</p>
-          <span class="book-tag book-no">✅ 无需预约</span>
-          <a class="nav-link" href="https://ditu.amap.com/search?query=艾力江和田馕坑烤肉" target="_blank" style="margin-top:6px;">🗺️ 高德导航</a>
+          <h5>领馆巷小吃<span class="price-tag">¥15-30/人</span></h5>
+          <p>📍 天山区领馆巷（和田二街旁）</p>
+          <div class="menu">🍽️ 推荐：肉馕、一把抓、薄皮包子、手工酸奶、酸奶粽子</div>
+          <p>🚗 与和田二街相邻，步行可达</p>
+          <span class="book-tag book-no">✅ 路边摊，即买即走</span>
         </div>
         <div class="restaurant-card">
-          <h5>伊孜海迩冰淇淋<span class="price-tag">¥15-25/人</span></h5>
-          <p>📍 天山区领馆巷</p>
-          <div class="menu">🍽️ 推荐：古法手工冰淇淋、酸奶粽子、手工酸奶</div>
-          <p>🚗 大巴扎步行可达，饭后甜品</p>
-          <span class="book-tag book-no">✅ 无需预约</span>
-          <a class="nav-link" href="https://ditu.amap.com/search?query=伊孜海迩冰淇淋" target="_blank" style="margin-top:6px;">🗺️ 高德导航</a>
+          <h5>大巴扎夜游（备选）<span class="price-tag">¥30-50/人</span></h5>
+          <p>📍 天山区解放南路8号</p>
+          <div class="menu">🍽️ 如果和田二街吃完还有肚子，可回大巴扎夜景拍照+二轮小吃</div>
+          <p>🚗 打车回大巴扎约15分钟 | 夜景灯光绝美</p>
+          <span class="book-tag book-no">✅ 开放式街区</span>
+          <a class="nav-link" href="https://ditu.amap.com/search?query=新疆国际大巴扎" target="_blank" style="margin-top:6px;">🗺️ 高德导航</a>
         </div>
       </div>
     </div>
@@ -832,7 +830,14 @@
   <div class="badge-wrap">
     <span class="badge b-temp">🌡️ 12-25°C</span>
     <span class="badge b-warn">⚠️ 车程较长</span>
-    <span class="badge b-nav">🗺️ S21沙漠公路+乌伦古湖</span>
+    <span class="badge b-nav">🗺️ 🚗 沙漠公路→湖泊→阿勒泰</span>
+  </div>
+  <!-- 今日路线概览 -->
+  <div style="background:linear-gradient(135deg,#e3f2fd,#bbdefb);border-radius:10px;padding:12px 14px;margin:10px 0 14px;border-left:4px solid var(--primary);">
+    <div style="font-size:.8em;font-weight:700;color:var(--primary);margin-bottom:6px;">📍 今日路线</div>
+    <div style="font-size:.78em;color:var(--text);line-height:1.8;">
+      🚗 08:00 出发S21 → 🏜️ 10:00 沙漠公路航拍 → 🍜 12:00 乌伦古湖午餐 → 🏞️ 13:30 黄金海岸 → 🌆 17:00 抵达阿勒泰
+    </div>
   </div>
   <div class="timeline">
     <div class="t-item">
@@ -860,7 +865,6 @@
     <div class="t-item">
       <div class="t-time"><span class="icon">🚗</span> 08:00 出发</div>
       <p>经<strong>S21沙漠公路</strong>，穿越古尔班通古特沙漠，沿途可停车航拍沙漠风光。</p>
-      <p style="font-size:.85em;color:var(--muted);margin-bottom:4px;"><strong>🚗 车程分段：</strong>乌鲁木齐→S21入口约1h → 沙漠公路段约3h（途中停车航拍）→ 乌伦古湖约1.5h → 阿勒泰约1.5h，全程约500km/6-7h</p>
       <div class="spot-card">
         <h5>📍 S21沙漠公路</h5>
         <p>乌鲁木齐→阿勒泰方向，全程约500km，穿越古尔班通古特沙漠</p>
@@ -868,7 +872,7 @@
         <a class="nav-link" href="https://ditu.amap.com/dir?from=乌鲁木齐&to=阿勒泰&mode=car" target="_blank">🗺️ 高德导航（全程）</a>
       </div>
       <div class="photo-guide">
-        <h5>📸 打卡案例 & 样片</h5>
+        <h5>📸 拍照指南</h5>
         <ul class="spot-list">
           <li>沙漠公路S弯：站在路中间（注意安全！）拍延伸感公路大片</li>
           <li>沙丘起伏处：低角度仰拍，人物剪影与沙丘曲线</li>
@@ -876,20 +880,7 @@
         </ul>
         <div class="outfit">👗 衣着推荐：白色/米色飘逸长裙+草帽+墨镜，与黄沙形成干净对比；或工装风（卡其+军绿）拍酷飒公路风</div>
         <div class="pose">🤳 姿势推荐：公路中间大步走（背影/侧面）、坐在公路中央（俯拍）、扬起裙摆转圈（动态感）、手遮阳光望远方（故事感）</div>
-      
-    <div style="margin-top:10px;padding-top:10px;border-top:1px dashed rgba(136,14,79,.2);">
-      <div style="font-size:.85em;font-weight:700;color:#880e4f;margin-bottom:8px;">📷 参考样片</div>
-      <div class="gallery-grid" style="grid-template-columns:1fr 1fr;gap:8px;">
-        <div class="gallery-card gallery-card-multi" style="box-shadow:0 1px 4px rgba(0,0,0,.08);" onclick="openGallery('S21沙漠公路', [{url:'https://s41.ax1x.com/2026/06/14/pmQOkPU.webp', desc:'S21沙漠公路穿越古尔班通古特沙漠，沿途可停车航拍沙漠风光。'},{url:'https://s41.ax1x.com/2026/06/14/pmQOi5T.webp', desc:'避开中午的顶光，其他时间段都可以拍摄。'},{url:'https://s41.ax1x.com/2026/06/14/pmQOPaV.webp', desc:'沙漠公路S弯，站在路中间（注意安全！）拍延伸感公路大片。'},{url:'https://s41.ax1x.com/2026/06/14/pmQv3GT.webp', desc:'沙丘起伏处，低角度仰拍，人物剪影与沙丘曲线。'},{url:'https://s41.ax1x.com/2026/06/14/pmQOCV0.webp', desc:'服务区观景台，停车区拍沙漠全景，无人机120m俯拍。'},{url:'https://s41.ax1x.com/2026/06/14/pmQLhgH.webp', desc:'沙漠公路沿途风光，戈壁与蓝天交织。'},{url:'https://s41.ax1x.com/2026/06/14/pmQv1iV.webp', desc:'AI话术：保持人物原有姿势与面部特征，3:4比例，巨型飞沙漩涡环绕升腾，飞沙极度密集弥漫全屏，人物全身附着大量沙尘，沙尘半掩人物轮廓却不模糊，漩涡纹理清晰，光影厚重，气势宏伟，沙尘分布自然有层次。'}], '穿越古尔班通古特沙漠，沿途可停车航拍沙漠风光。')">
-          <img class="gallery-thumb" src="https://s41.ax1x.com/2026/06/14/pmQOkPU.webp" alt="S21沙漠公路" style="height:100px;">
-          <div class="gallery-info" style="padding:8px 10px 10px;">
-            <div class="gallery-name" style="font-size:.85em;">S21沙漠公路</div>
-            <div class="gallery-tag"><span class="dot has-img"></span> 7张样片</div>
-          </div>
-        </div>
       </div>
-    </div>
-  </div>
     </div>
 
     <div class="t-item">
@@ -916,7 +907,7 @@
         <a class="nav-link" href="https://ditu.amap.com/search?query=乌伦古湖黄金海岸" target="_blank">🗺️ 高德导航</a>
       </div>
       <div class="photo-guide">
-        <h5>📸 打卡案例 & 样片</h5>
+        <h5>📸 拍照指南</h5>
         <ul class="spot-list">
           <li>湖边沙滩：低角度拍"海边"既视感，湖水碧蓝如海</li>
           <li>湖岸线S弯：长焦压缩空间，人物站在湖岸线拐点</li>
@@ -924,20 +915,7 @@
         </ul>
         <div class="outfit">👗 衣着推荐：白色/浅蓝连衣裙+草编包，营造"海边度假"感；或亮黄色与蓝湖形成互补色对比</div>
         <div class="pose">🤳 姿势推荐：踢水浪花（动态感）、坐在沙滩上抱膝（文艺感）、张开双臂迎湖风（自由感）、俯拍躺沙滩（慵懒感）</div>
-      
-    <div style="margin-top:10px;padding-top:10px;border-top:1px dashed rgba(136,14,79,.2);">
-      <div style="font-size:.85em;font-weight:700;color:#880e4f;margin-bottom:8px;">📷 参考样片</div>
-      <div class="gallery-grid" style="grid-template-columns:1fr 1fr;gap:8px;">
-        <div class="gallery-card" style="box-shadow:0 1px 4px rgba(0,0,0,.08);" onclick="openGallery('乌伦古湖', '', '湖边品尝冷水鱼宴，可飞无人机，注意防风。衣着：白色/浅蓝连衣裙+草编包。姿势：踢水浪花、坐在沙滩上抱膝、张开双臂迎湖风。')">
-          <div class="gallery-thumb placeholder" style="height:100px;font-size:.8em;">🖼️ 暂无案例</div>
-          <div class="gallery-info" style="padding:8px 10px 10px;">
-            <div class="gallery-name" style="font-size:.85em;">乌伦古湖</div>
-            <div class="gallery-tag"><span class="dot"></span> 待补充</div>
-          </div>
-        </div>
       </div>
-    </div>
-  </div>
     </div>
 
     <div class="t-item">
@@ -984,13 +962,19 @@
   <div class="badge-wrap">
     <span class="badge b-temp">🌡️ 8-20°C</span>
     <span class="badge b-photo">📷 摄影黄金日</span>
-    <span class="badge b-nav">🗺️ 禾木公路+禾木村</span>
+    <span class="badge b-nav">🗺️ 🚗 最美公路→禾木村</span>
+  </div>
+  <!-- 今日路线概览 -->
+  <div style="background:linear-gradient(135deg,#e3f2fd,#bbdefb);border-radius:10px;padding:12px 14px;margin:10px 0 14px;border-left:4px solid var(--primary);">
+    <div style="font-size:.8em;font-weight:700;color:var(--primary);margin-bottom:6px;">📍 今日路线</div>
+    <div style="font-size:.78em;color:var(--text);line-height:1.8;">
+      🚗 09:00 出发 → 🍜 12:30 布尔津午餐 → 🏔️ 14:00 抵达禾木 → 📸 16:00 观景台日落 → 🌌 22:00 星空拍摄
+    </div>
   </div>
   <div class="timeline">
     <div class="t-item">
       <div class="t-time"><span class="icon">🚗</span> 09:00 出发</div>
       <p>沿<strong>禾木公路</strong>行驶，被誉为"中国最美公路"之一，沿途草原、森林、溪流交织。</p>
-      <p style="font-size:.85em;color:var(--muted);margin-bottom:4px;"><strong>🚗 车程分段：</strong>阿勒泰→布尔津约2h（午餐休息）→ 禾木公路约1.5h → 禾木村换乘区间车约30min，全程约230km/4h</p>
       <div class="spot-card">
         <h5>📍 禾木公路</h5>
         <p>阿勒泰→禾木村，约230km/4h，沿途经草原、白桦林、雪山</p>
@@ -1097,7 +1081,14 @@
   <div class="badge-wrap">
     <span class="badge b-temp">🌡️ 6-18°C</span>
     <span class="badge b-drone">✈️ 航拍限制区</span>
-    <span class="badge b-nav">🗺️ 禾木晨雾+喀纳斯湖+观鱼台</span>
+    <span class="badge b-nav">🗺️ 🌅 晨雾→喀纳斯湖→观鱼台</span>
+  </div>
+  <!-- 今日路线概览 -->
+  <div style="background:linear-gradient(135deg,#e3f2fd,#bbdefb);border-radius:10px;padding:12px 14px;margin:10px 0 14px;border-left:4px solid var(--primary);">
+    <div style="font-size:.8em;font-weight:700;color:var(--primary);margin-bottom:6px;">📍 今日路线</div>
+    <div style="font-size:.78em;color:var(--text);line-height:1.8;">
+      🌅 06:00 禾木晨雾 → 🍜 08:30 早餐 → 🚗 10:00 前往喀纳斯 → 🏞️ 12:00 喀纳斯湖 → 📸 15:00 观鱼台 → 🌅 19:00 湖边日落
+    </div>
   </div>
   <div class="timeline">
     <div class="t-item">
@@ -1110,7 +1101,7 @@
         <a class="nav-link" href="https://ditu.amap.com/search?query=禾木观景台" target="_blank">🗺️ 高德导航</a>
       </div>
       <div class="photo-guide">
-        <h5>📸 打卡案例 & 样片</h5>
+        <h5>📸 拍照指南</h5>
         <ul class="spot-list">
           <li>晨雾全景：长焦压缩，晨雾笼罩下的村庄如仙境</li>
           <li>炊烟+晨雾：村民早起做饭，炊烟与晨雾交织</li>
@@ -1118,20 +1109,7 @@
         </ul>
         <div class="outfit">👗 衣着推荐：厚外套+围巾，清晨仅6°C；可内搭亮色毛衣，脱外套拍人像</div>
         <div class="pose">🤳 姿势推荐：观景台俯拍村庄（大气感）、晨雾中行走（仙气感）、逆光剪影（艺术感）</div>
-      
-    <div style="margin-top:10px;padding-top:10px;border-top:1px dashed rgba(136,14,79,.2);">
-      <div style="font-size:.85em;font-weight:700;color:#880e4f;margin-bottom:8px;">📷 参考样片</div>
-      <div class="gallery-grid" style="grid-template-columns:1fr 1fr;gap:8px;">
-        <div class="gallery-card" style="box-shadow:0 1px 4px rgba(0,0,0,.08);" onclick="openGallery('禾木晨雾', '', '最经典画面，日出后1小时内晨雾消散，需早起占位。衣着：厚外套+围巾。姿势：观景台俯拍村庄、晨雾中行走、逆光剪影。')">
-          <div class="gallery-thumb placeholder" style="height:100px;font-size:.8em;">🖼️ 暂无案例</div>
-          <div class="gallery-info" style="padding:8px 10px 10px;">
-            <div class="gallery-name" style="font-size:.85em;">禾木晨雾</div>
-            <div class="gallery-tag"><span class="dot"></span> 待补充</div>
-          </div>
-        </div>
       </div>
-    </div>
-  </div>
     </div>
 
     <div class="t-item">
@@ -1167,7 +1145,7 @@
         <a class="nav-link" href="https://ditu.amap.com/search?query=喀纳斯湖" target="_blank">🗺️ 高德导航</a>
       </div>
       <div class="photo-guide">
-        <h5>📸 打卡案例 & 样片</h5>
+        <h5>📸 拍照指南</h5>
         <ul class="spot-list">
           <li>湖边栈道：碧水+雪山倒影，长焦压缩空间</li>
           <li>游船甲板：湖中拍两岸雪山，广角震撼</li>
@@ -1175,20 +1153,7 @@
         </ul>
         <div class="outfit">👗 衣着推荐：蓝白配色（与湖水呼应）或亮黄色（对比强烈），冲锋衣防风保暖</div>
         <div class="pose">🤳 姿势推荐：湖边张开双臂（自由感）、栈道回眸（故事感）、船上举帽（俏皮感）</div>
-      
-    <div style="margin-top:10px;padding-top:10px;border-top:1px dashed rgba(136,14,79,.2);">
-      <div style="font-size:.85em;font-weight:700;color:#880e4f;margin-bottom:8px;">📷 参考样片</div>
-      <div class="gallery-grid" style="grid-template-columns:1fr 1fr;gap:8px;">
-        <div class="gallery-card" style="box-shadow:0 1px 4px rgba(0,0,0,.08);" onclick="openGallery('喀纳斯湖', '', '可乘船或沿湖边栈道徒步，湖水碧绿，远处雪山为背景。衣着：蓝白配色或亮黄色。姿势：湖边张开双臂、栈道回眸、船上举帽。')">
-          <div class="gallery-thumb placeholder" style="height:100px;font-size:.8em;">🖼️ 暂无案例</div>
-          <div class="gallery-info" style="padding:8px 10px 10px;">
-            <div class="gallery-name" style="font-size:.85em;">喀纳斯湖</div>
-            <div class="gallery-tag"><span class="dot"></span> 待补充</div>
-          </div>
-        </div>
       </div>
-    </div>
-  </div>
     </div>
 
     <div class="t-item">
@@ -1201,7 +1166,7 @@
         <a class="nav-link" href="https://ditu.amap.com/search?query=喀纳斯观鱼台" target="_blank">🗺️ 高德导航</a>
       </div>
       <div class="photo-guide">
-        <h5>📸 打卡案例 & 样片</h5>
+        <h5>📸 拍照指南</h5>
         <ul class="spot-list">
           <li>观鱼台全景：俯瞰喀纳斯湖S弯，标志性机位</li>
           <li>台阶中段：回头拍蜿蜒台阶+湖水背景</li>
@@ -1209,20 +1174,7 @@
         </ul>
         <div class="outfit">👗 衣着推荐：运动休闲风（速干衣+冲锋裤），登山鞋必备；可备亮色外套山顶拍照</div>
         <div class="pose">🤳 姿势推荐：山顶张开双臂（征服感）、台阶上回头（层次感）、坐平台边缘（惊险感）</div>
-      
-    <div style="margin-top:10px;padding-top:10px;border-top:1px dashed rgba(136,14,79,.2);">
-      <div style="font-size:.85em;font-weight:700;color:#880e4f;margin-bottom:8px;">📷 参考样片</div>
-      <div class="gallery-grid" style="grid-template-columns:1fr 1fr;gap:8px;">
-        <div class="gallery-card" style="box-shadow:0 1px 4px rgba(0,0,0,.08);" onclick="openGallery('观鱼台', '', '1068级台阶登顶，俯瞰喀纳斯湖全景，寻找湖怪传说。衣着：运动休闲风+亮色外套。姿势：山顶张开双臂、台阶上回头、坐平台边缘。')">
-          <div class="gallery-thumb placeholder" style="height:100px;font-size:.8em;">🖼️ 暂无案例</div>
-          <div class="gallery-info" style="padding:8px 10px 10px;">
-            <div class="gallery-name" style="font-size:.85em;">观鱼台</div>
-            <div class="gallery-tag"><span class="dot"></span> 待补充</div>
-          </div>
-        </div>
       </div>
-    </div>
-  </div>
     </div>
 
     <div class="t-item">
@@ -1251,7 +1203,14 @@
   <div class="badge-wrap">
     <span class="badge b-temp">🌡️ 15-30°C</span>
     <span class="badge b-photo">📷 三湾+魔鬼城</span>
-    <span class="badge b-nav">🗺️ 喀纳斯三湾+世界魔鬼城</span>
+    <span class="badge b-nav">🗺️ 🌊 三湾晨雾→魔鬼城日落</span>
+  </div>
+  <!-- 今日路线概览 -->
+  <div style="background:linear-gradient(135deg,#e3f2fd,#bbdefb);border-radius:10px;padding:12px 14px;margin:10px 0 14px;border-left:4px solid var(--primary);">
+    <div style="font-size:.8em;font-weight:700;color:var(--primary);margin-bottom:6px;">📍 今日路线</div>
+    <div style="font-size:.78em;color:var(--text);line-height:1.8;">
+      🌅 07:00 三湾晨雾 → 🍜 10:30 早餐 → 🚗 12:00 前往乌尔禾 → 🌄 17:00 魔鬼城日落
+    </div>
   </div>
   <div class="timeline">
     <div class="t-item">
@@ -1264,7 +1223,7 @@
         <a class="nav-link" href="https://ditu.amap.com/search?query=喀纳斯三湾" target="_blank">🗺️ 高德导航</a>
       </div>
       <div class="photo-guide">
-        <h5>📸 打卡案例 & 样片</h5>
+        <h5>📸 拍照指南</h5>
         <ul class="spot-list">
           <li>神仙湾晨雾：清晨薄雾如仙境，长焦拍晨雾+森林</li>
           <li>月亮湾S弯：标志性机位，俯瞰碧蓝湖水S弯</li>
@@ -1273,20 +1232,7 @@
         </ul>
         <div class="outfit">👗 衣着推荐：白色/浅色长裙（晨雾中仙气飘飘），或户外冲锋衣+亮色围巾</div>
         <div class="pose">🤳 姿势推荐：栈道回眸（故事感）、晨雾中张开双臂（仙气感）、湖边倒影（对称美）、俯拍S弯（大气感）</div>
-      
-    <div style="margin-top:10px;padding-top:10px;border-top:1px dashed rgba(136,14,79,.2);">
-      <div style="font-size:.85em;font-weight:700;color:#880e4f;margin-bottom:8px;">📷 参考样片</div>
-      <div class="gallery-grid" style="grid-template-columns:1fr 1fr;gap:8px;">
-        <div class="gallery-card" style="box-shadow:0 1px 4px rgba(0,0,0,.08);" onclick="openGallery('喀纳斯三湾', '', '神仙湾、月亮湾、卧龙湾，清晨薄雾缭绕是最佳拍摄时段。衣着：白色/浅色长裙。姿势：栈道回眸、晨雾中张开双臂、湖边倒影。')">
-          <div class="gallery-thumb placeholder" style="height:100px;font-size:.8em;">🖼️ 暂无案例</div>
-          <div class="gallery-info" style="padding:8px 10px 10px;">
-            <div class="gallery-name" style="font-size:.85em;">喀纳斯三湾</div>
-            <div class="gallery-tag"><span class="dot"></span> 待补充</div>
-          </div>
-        </div>
       </div>
-    </div>
-  </div>
     </div>
 
     <div class="t-item">
@@ -1340,7 +1286,7 @@
         <a class="nav-link" href="https://ditu.amap.com/search?query=世界魔鬼城" target="_blank">🗺️ 高德导航</a>
       </div>
       <div class="photo-guide">
-        <h5>📸 打卡案例 & 样片</h5>
+        <h5>📸 拍照指南</h5>
         <ul class="spot-list">
           <li>狮身人面像：借位拍摄，人物站在"狮身"前</li>
           <li>魔鬼夫妻：日落金光洒在岩层上，色彩浓烈</li>
@@ -1349,20 +1295,7 @@
         </ul>
         <div class="outfit">👗 衣着推荐：红色/黑色长裙（与土黄色雅丹形成强烈对比），或西部牛仔风（牛仔帽+皮靴）</div>
         <div class="pose">🤳 姿势推荐：站在雅丹顶端（霸气感）、风沙中甩裙摆（动态感）、背影走向日落（故事感）、坐在岩石上（颓废感）</div>
-      
-    <div style="margin-top:10px;padding-top:10px;border-top:1px dashed rgba(136,14,79,.2);">
-      <div style="font-size:.85em;font-weight:700;color:#880e4f;margin-bottom:8px;">📷 参考样片</div>
-      <div class="gallery-grid" style="grid-template-columns:1fr 1fr;gap:8px;">
-        <div class="gallery-card" style="box-shadow:0 1px 4px rgba(0,0,0,.08);" onclick="openGallery('世界魔鬼城', '', '日落时分雅丹地貌最壮观，金光洒在岩层上色彩浓烈。衣着：红色/黑色长裙或西部牛仔风。姿势：站在雅丹顶端、风沙中甩裙摆、背影走向日落。')">
-          <div class="gallery-thumb placeholder" style="height:100px;font-size:.8em;">🖼️ 暂无案例</div>
-          <div class="gallery-info" style="padding:8px 10px 10px;">
-            <div class="gallery-name" style="font-size:.85em;">世界魔鬼城</div>
-            <div class="gallery-tag"><span class="dot"></span> 待补充</div>
-          </div>
-        </div>
       </div>
-    </div>
-  </div>
     </div>
 
     <div class="t-item">
@@ -1396,13 +1329,19 @@
   <div class="badge-wrap">
     <span class="badge b-temp">🌡️ 10-22°C</span>
     <span class="badge b-warn">⚠️ 车程最长</span>
-    <span class="badge b-nav">🗺️ 赛里木湖环湖</span>
+    <span class="badge b-nav">🗺️ 🚗 最长车程→赛里木湖</span>
+  </div>
+  <!-- 今日路线概览 -->
+  <div style="background:linear-gradient(135deg,#e3f2fd,#bbdefb);border-radius:10px;padding:12px 14px;margin:10px 0 14px;border-left:4px solid var(--primary);">
+    <div style="font-size:.8em;font-weight:700;color:var(--primary);margin-bottom:6px;">📍 今日路线</div>
+    <div style="font-size:.78em;color:var(--text);line-height:1.8;">
+      🚗 07:30 出发（最长车程） → 🍜 12:30 精河午餐 → 🏞️ 14:00 抵达赛湖 → 📸 16:00-21:00 环湖拍摄 → 🌌 22:00 湖边星空
+    </div>
   </div>
   <div class="timeline">
     <div class="t-item">
       <div class="t-time"><span class="icon">🚗</span> 07:30 出发</div>
       <p>今日车程最长（约530km/6h），建议早起。沿途经过精河，可品尝<strong>精河枸杞</strong>。</p>
-      <p style="font-size:.85em;color:var(--muted);margin-bottom:4px;"><strong>🚗 车程分段：</strong>乌尔禾→奎屯约2.5h → 精河服务区休息约1.5h → 赛里木湖约2h，全程约530km/6h，建议07:30出发</p>
       <div class="spot-card">
         <h5>📍 乌尔禾→赛里木湖</h5>
         <p>全程约530km，经奎屯、精河，约6小时车程</p>
@@ -1454,7 +1393,7 @@
         <a class="nav-link" href="https://ditu.amap.com/search?query=赛里木湖环湖公路" target="_blank">🗺️ 高德导航</a>
       </div>
       <div class="photo-guide">
-        <h5>📸 打卡案例 & 样片</h5>
+        <h5>📸 拍照指南</h5>
         <ul class="spot-list">
           <li>亲水滩：湖水清澈见底，低角度拍湖水+人物倒影</li>
           <li>点将台：高角度俯瞰湖面， panoramic全景</li>
@@ -1464,20 +1403,7 @@
         </ul>
         <div class="outfit">👗 衣着推荐：白色/浅蓝长裙（与湖水融合）或亮黄色/红色（强烈对比），配草编帽+墨镜</div>
         <div class="pose">🤳 姿势推荐：湖边转圈甩裙摆（动态感）、坐湖边伸手触水（文艺感）、公路中间大步走（自由感）、野花丛中俯拍（清新感）</div>
-      
-    <div style="margin-top:10px;padding-top:10px;border-top:1px dashed rgba(136,14,79,.2);">
-      <div style="font-size:.85em;font-weight:700;color:#880e4f;margin-bottom:8px;">📷 参考样片</div>
-      <div class="gallery-grid" style="grid-template-columns:1fr 1fr;gap:8px;">
-        <div class="gallery-card gallery-card-multi" style="box-shadow:0 1px 4px rgba(0,0,0,.08);" onclick="openGallery('赛里木湖', 'https://kimi-web-img.moonshot.cn/img/image.cns.com.cn/cbf96db72ae9fffd9d2e0164625d0e4d78cfc054.jpg,https://kimi-web-img.moonshot.cn/img/www.xinjiang888.com/d8ae35f48426a2bedaeafc04f3532ee42cdf7e70.jpg,https://kimi-web-img.moonshot.cn/img/www.xj.news.cn/2f0bb0c1abf034a1fa6f9dc16c85e79d54a81e04.JPG', '案例。')">
-          <img class="gallery-thumb" src="https://kimi-web-img.moonshot.cn/img/image.cns.com.cn/cbf96db72ae9fffd9d2e0164625d0e4d78cfc054.jpg" alt="赛里木湖" style="height:100px;">
-          <div class="gallery-info" style="padding:8px 10px 10px;">
-            <div class="gallery-name" style="font-size:.85em;">赛里木湖</div>
-            <div class="gallery-tag"><span class="dot has-img"></span> 3张样片</div>
-          </div>
-        </div>
       </div>
-    </div>
-  </div>
     </div>
 
     <div class="t-item">
@@ -1529,7 +1455,14 @@
   <div class="badge-wrap">
     <span class="badge b-temp">🌡️ 15-28°C</span>
     <span class="badge b-photo">📷 果子沟大桥</span>
-    <span class="badge b-nav">🗺️ 赛湖日出+果子沟+霍城+伊宁</span>
+    <span class="badge b-nav">🗺️ 🌅 赛湖日出→果子沟→伊宁</span>
+  </div>
+  <!-- 今日路线概览 -->
+  <div style="background:linear-gradient(135deg,#e3f2fd,#bbdefb);border-radius:10px;padding:12px 14px;margin:10px 0 14px;border-left:4px solid var(--primary);">
+    <div style="font-size:.8em;font-weight:700;color:var(--primary);margin-bottom:6px;">📍 今日路线</div>
+    <div style="font-size:.78em;color:var(--text);line-height:1.8;">
+      🌅 07:00 赛湖日出 → 🌉 10:00 果子沟大桥 → 🌸 12:00 霍城薰衣草 → 🍜 12:30 午餐 → 🏛️ 15:00 伊宁六星街
+    </div>
   </div>
   <div class="timeline">
     <div class="t-item">
@@ -1576,7 +1509,7 @@
         <a class="nav-link" href="https://ditu.amap.com/search?query=果子沟大桥观景台" target="_blank">🗺️ 高德导航</a>
       </div>
       <div class="photo-guide">
-        <h5>📸 打卡案例 & 样片</h5>
+        <h5>📸 拍照指南</h5>
         <ul class="spot-list">
           <li>观景台全景：长焦压缩大桥+山谷，震撼感</li>
           <li>大桥侧面：仰拍大桥雄伟结构</li>
@@ -1584,20 +1517,7 @@
         </ul>
         <div class="outfit">👗 衣着推荐：休闲户外风（冲锋衣+牛仔裤），配亮色围巾点睛</div>
         <div class="pose">🤳 姿势推荐：观景台张开双臂（大气感）、靠栏杆望远方（故事感）、俯拍公路（震撼感）</div>
-      
-    <div style="margin-top:10px;padding-top:10px;border-top:1px dashed rgba(136,14,79,.2);">
-      <div style="font-size:.85em;font-weight:700;color:#880e4f;margin-bottom:8px;">📷 参考样片</div>
-      <div class="gallery-grid" style="grid-template-columns:1fr 1fr;gap:8px;">
-        <div class="gallery-card" style="box-shadow:0 1px 4px rgba(0,0,0,.08);" onclick="openGallery('果子沟大桥', '', '新疆最高大桥，桥面距谷底200米，观景台可停车拍摄。衣着：休闲户外风+亮色围巾。姿势：观景台张开双臂、靠栏杆望远方、俯拍公路。')">
-          <div class="gallery-thumb placeholder" style="height:100px;font-size:.8em;">🖼️ 暂无案例</div>
-          <div class="gallery-info" style="padding:8px 10px 10px;">
-            <div class="gallery-name" style="font-size:.85em;">果子沟大桥</div>
-            <div class="gallery-tag"><span class="dot"></span> 待补充</div>
-          </div>
-        </div>
       </div>
-    </div>
-  </div>
     </div>
 
     <div class="t-item">
@@ -1610,7 +1530,7 @@
         <a class="nav-link" href="https://ditu.amap.com/search?query=解忧公主薰衣草园" target="_blank">🗺️ 高德导航</a>
       </div>
       <div class="photo-guide">
-        <h5>📸 打卡案例 & 样片</h5>
+        <h5>📸 拍照指南</h5>
         <ul class="spot-list">
           <li>花田小径：站在花田小径中央，两侧花海延伸</li>
           <li>花田中景：半身人像+花海背景，虚化前景</li>
@@ -1618,20 +1538,7 @@
         </ul>
         <div class="outfit">👗 衣着推荐：白色/米色长裙（与紫色花海对比），避免穿紫色（会融入花海）</div>
         <div class="pose">🤳 姿势推荐：花田中转圈（动态感）、蹲下闻花（清新感）、花田中奔跑（自由感）、背影走向花海深处（故事感）</div>
-      
-    <div style="margin-top:10px;padding-top:10px;border-top:1px dashed rgba(136,14,79,.2);">
-      <div style="font-size:.85em;font-weight:700;color:#880e4f;margin-bottom:8px;">📷 参考样片</div>
-      <div class="gallery-grid" style="grid-template-columns:1fr 1fr;gap:8px;">
-        <div class="gallery-card" style="box-shadow:0 1px 4px rgba(0,0,0,.08);" onclick="openGallery('霍城薰衣草', '', '8月中旬花期已过，但晚花品种仍可拍摄紫色花田。衣着：白色/米色长裙。姿势：花田中转圈、蹲下闻花、花田中奔跑。')">
-          <div class="gallery-thumb placeholder" style="height:100px;font-size:.8em;">🖼️ 暂无案例</div>
-          <div class="gallery-info" style="padding:8px 10px 10px;">
-            <div class="gallery-name" style="font-size:.85em;">霍城薰衣草</div>
-            <div class="gallery-tag"><span class="dot"></span> 待补充</div>
-          </div>
-        </div>
       </div>
-    </div>
-  </div>
     </div>
 
     <div class="t-item">
@@ -1658,7 +1565,7 @@
         <a class="nav-link" href="https://ditu.amap.com/search?query=伊宁六星街" target="_blank">🗺️ 高德导航</a>
       </div>
       <div class="photo-guide">
-        <h5>📸 打卡案例 & 样片</h5>
+        <h5>📸 拍照指南</h5>
         <ul class="spot-list">
           <li>彩色房屋前：俄罗斯风情建筑，色彩丰富</li>
           <li>六星街中心：俯拍六角星形街道布局</li>
@@ -1667,20 +1574,7 @@
         </ul>
         <div class="outfit">👗 衣着推荐：复古文艺风（碎花裙+草编包）或简约白裙（突出彩色建筑）</div>
         <div class="pose">🤳 姿势推荐：彩色门前回眸（故事感）、街巷中行走（街拍感）、坐在台阶上（文艺感）、与当地人合影（人文感）</div>
-      
-    <div style="margin-top:10px;padding-top:10px;border-top:1px dashed rgba(136,14,79,.2);">
-      <div style="font-size:.85em;font-weight:700;color:#880e4f;margin-bottom:8px;">📷 参考样片</div>
-      <div class="gallery-grid" style="grid-template-columns:1fr 1fr;gap:8px;">
-        <div class="gallery-card" style="box-shadow:0 1px 4px rgba(0,0,0,.08);" onclick="openGallery('伊宁六星街', '', '俄罗斯风情彩色建筑，适合人文摄影与街拍。衣着：复古文艺风或简约白裙。姿势：彩色门前回眸、街巷中行走、坐在台阶上。')">
-          <div class="gallery-thumb placeholder" style="height:100px;font-size:.8em;">🖼️ 暂无案例</div>
-          <div class="gallery-info" style="padding:8px 10px 10px;">
-            <div class="gallery-name" style="font-size:.85em;">伊宁六星街</div>
-            <div class="gallery-tag"><span class="dot"></span> 待补充</div>
-          </div>
-        </div>
       </div>
-    </div>
-  </div>
     </div>
 
     <div class="t-item">
@@ -1721,7 +1615,14 @@
   <div class="badge-wrap">
     <span class="badge b-temp">🌡️ 12-24°C</span>
     <span class="badge b-photo">📷 空中草原</span>
-    <span class="badge b-nav">🗺️ 那拉提空中草原+雪莲谷</span>
+    <span class="badge b-nav">🗺️ 🚗 河谷→那拉提草原</span>
+  </div>
+  <!-- 今日路线概览 -->
+  <div style="background:linear-gradient(135deg,#e3f2fd,#bbdefb);border-radius:10px;padding:12px 14px;margin:10px 0 14px;border-left:4px solid var(--primary);">
+    <div style="font-size:.8em;font-weight:700;color:var(--primary);margin-bottom:6px;">📍 今日路线</div>
+    <div style="font-size:.78em;color:var(--text);line-height:1.8;">
+      🚗 09:00 出发 → 🍜 12:00 那拉提镇午餐 → 🏔️ 13:30 空中草原 → 🐎 14:30 骑马/雪莲谷 → 🌅 19:00 草原日落
+    </div>
   </div>
   <div class="timeline">
     <div class="t-item">
@@ -1740,7 +1641,6 @@
     <div class="t-item">
       <div class="t-time"><span class="icon">🚗</span> 09:00 出发</div>
       <p>沿伊犁河谷行驶，沿途油菜花田、向日葵花海（季节性）。</p>
-      <p style="font-size:.85em;color:var(--muted);margin-bottom:4px;"><strong>🚗 车程分段：</strong>伊宁→新源约2h → 那拉提镇约1h → 景区约30min，全程约260km/3.5h</p>
       <div class="spot-card">
         <h5>📍 伊宁→那拉提</h5>
         <p>沿G218国道，约260km/3.5h，沿途经伊犁河谷</p>
@@ -1783,7 +1683,7 @@
         <a class="nav-link" href="https://ditu.amap.com/search?query=那拉提空中草原" target="_blank">🗺️ 高德导航</a>
       </div>
       <div class="photo-guide">
-        <h5>📸 打卡案例 & 样片</h5>
+        <h5>📸 拍照指南</h5>
         <ul class="spot-list">
           <li>空中草原全景：雪山+森林+草原三重景观，广角震撼</li>
           <li>草原S弯：区间车停靠点，俯拍草原曲线</li>
@@ -1792,20 +1692,7 @@
         </ul>
         <div class="outfit">👗 衣着推荐：白色/红色长裙（草原中突出），配牛仔外套+草帽，或民族风披肩</div>
         <div class="pose">🤳 姿势推荐：草原张开双臂（自由感）、奔跑甩裙摆（动态感）、背靠雪山（大气感）、与羊群互动（生活感）</div>
-      
-    <div style="margin-top:10px;padding-top:10px;border-top:1px dashed rgba(136,14,79,.2);">
-      <div style="font-size:.85em;font-weight:700;color:#880e4f;margin-bottom:8px;">📷 参考样片</div>
-      <div class="gallery-grid" style="grid-template-columns:1fr 1fr;gap:8px;">
-        <div class="gallery-card" style="box-shadow:0 1px 4px rgba(0,0,0,.08);" onclick="openGallery('那拉提空中草原', '', '雪山、森林、草原三重景观，航拍草原曲线绝美。衣着：白色/红色长裙+牛仔外套。姿势：草原张开双臂、奔跑甩裙摆、背靠雪山。')">
-          <div class="gallery-thumb placeholder" style="height:100px;font-size:.8em;">🖼️ 暂无案例</div>
-          <div class="gallery-info" style="padding:8px 10px 10px;">
-            <div class="gallery-name" style="font-size:.85em;">那拉提空中草原</div>
-            <div class="gallery-tag"><span class="dot"></span> 待补充</div>
-          </div>
-        </div>
       </div>
-    </div>
-  </div>
     </div>
 
     <div class="t-item">
@@ -1870,7 +1757,14 @@
   <div class="badge-wrap">
     <span class="badge b-temp">🌡️ 15-28°C</span>
     <span class="badge b-warn">⚠️ 独库公路</span>
-    <span class="badge b-nav">🗺️ 独库公路北段</span>
+    <span class="badge b-nav">🗺️ 🏔️ 独库公路→翻越天山</span>
+  </div>
+  <!-- 今日路线概览 -->
+  <div style="background:linear-gradient(135deg,#e3f2fd,#bbdefb);border-radius:10px;padding:12px 14px;margin:10px 0 14px;border-left:4px solid var(--primary);">
+    <div style="font-size:.8em;font-weight:700;color:var(--primary);margin-bottom:6px;">📍 今日路线</div>
+    <div style="font-size:.78em;color:var(--text);line-height:1.8;">
+      🚗 07:30 出发 → 🏔️ 09:00 哈希勒根达坂 → 🌊 11:00 天瀑 → 🍜 12:00 乔尔玛午餐 → 🛣️ 13:00 烈士陵园 → 🌆 17:00 抵达乌鲁木齐
+    </div>
   </div>
   <div class="timeline">
     <div class="t-item">
@@ -1889,7 +1783,6 @@
     <div class="t-item">
       <div class="t-time"><span class="icon">🚗</span> 07:30 出发</div>
       <p>今日走<strong>独库公路北段</strong>（那拉提-独山子），约250km，是全程最精华也最险峻的路段。</p>
-      <p style="font-size:.85em;color:var(--muted);margin-bottom:4px;"><strong>🚗 车程分段：</strong>那拉提→哈希勒根达坂约1.5h → 天瀑/乔尔玛约1h → 独山子约3h → 乌鲁木齐约1h，全程约450km/7h</p>
       <div class="spot-card">
         <h5>📍 独库公路北段</h5>
         <p>那拉提→独山子，约250km，途经哈希勒根达坂、天瀑、乔尔玛</p>
@@ -1908,7 +1801,7 @@
         <a class="nav-link" href="https://ditu.amap.com/search?query=哈希勒根达坂" target="_blank">🗺️ 高德导航</a>
       </div>
       <div class="photo-guide">
-        <h5>📸 打卡案例 & 样片</h5>
+        <h5>📸 拍照指南</h5>
         <ul class="spot-list">
           <li>达坂全景：雪山+公路+车辆，标志性独库公路照</li>
           <li>冰川近景：近距离拍冰川纹理，蓝冰绝美</li>
@@ -1916,20 +1809,7 @@
         </ul>
         <div class="outfit">👗 衣着推荐：厚羽绒服（海拔3390米温度低），配亮色围巾/帽子点睛</div>
         <div class="pose">🤳 姿势推荐：张开双臂拥抱雪山（征服感）、坐在雪地上（童趣感）、公路中间跳跃（活力感）</div>
-      
-    <div style="margin-top:10px;padding-top:10px;border-top:1px dashed rgba(136,14,79,.2);">
-      <div style="font-size:.85em;font-weight:700;color:#880e4f;margin-bottom:8px;">📷 参考样片</div>
-      <div class="gallery-grid" style="grid-template-columns:1fr 1fr;gap:8px;">
-        <div class="gallery-card" style="box-shadow:0 1px 4px rgba(0,0,0,.08);" onclick="openGallery('独库公路·哈希勒根达坂', '', '海拔3390米，雪山冰川景观，注意保暖与防晒。衣着：厚羽绒服+亮色围巾。姿势：张开双臂拥抱雪山、坐在雪地上、公路中间跳跃。')">
-          <div class="gallery-thumb placeholder" style="height:100px;font-size:.8em;">🖼️ 暂无案例</div>
-          <div class="gallery-info" style="padding:8px 10px 10px;">
-            <div class="gallery-name" style="font-size:.85em;">哈希勒根达坂</div>
-            <div class="gallery-tag"><span class="dot"></span> 待补充</div>
-          </div>
-        </div>
       </div>
-    </div>
-  </div>
     </div>
 
     <div class="t-item">
@@ -2030,7 +1910,14 @@
   <div class="badge-wrap">
     <span class="badge b-temp">🌡️ 15-28°C</span>
     <span class="badge b-photo">📷 红山公园+天山大峡谷</span>
-    <span class="badge b-nav">🗺️ 乌鲁木齐一日游</span>
+    <span class="badge b-nav">🗺️ 🏔️ 大峡谷→红山→大巴扎</span>
+  </div>
+  <!-- 今日路线概览 -->
+  <div style="background:linear-gradient(135deg,#e3f2fd,#bbdefb);border-radius:10px;padding:12px 14px;margin:10px 0 14px;border-left:4px solid var(--primary);">
+    <div style="font-size:.8em;font-weight:700;color:var(--primary);margin-bottom:6px;">📍 今日路线</div>
+    <div style="font-size:.78em;color:var(--text);line-height:1.8;">
+      🍜 09:00 早餐 → 🏔️ 10:00 天山大峡谷 → 🍜 13:00 午餐 → 🏞️ 15:00 红山公园 → 🛍️ 17:30 采购伴手礼 → 🍜 19:30 告别晚餐 → 🌃 21:30 夜游大巴扎
+    </div>
   </div>
   <div class="timeline">
     <div class="t-item">
@@ -2056,7 +1943,7 @@
         <a class="nav-link" href="https://ditu.amap.com/search?query=天山大峡谷" target="_blank">🗺️ 高德导航</a>
       </div>
       <div class="photo-guide">
-        <h5>📸 打卡案例 & 样片</h5>
+        <h5>📸 拍照指南</h5>
         <ul class="spot-list">
           <li>天鹅湖：湖水+雪山倒影，镜面效果</li>
           <li>雪岭云杉林：原始森林，森系大片</li>
@@ -2065,20 +1952,7 @@
         </ul>
         <div class="outfit">👗 衣着推荐：白色/红色长裙（森林/草原中突出），配牛仔外套+马丁靴</div>
         <div class="pose">🤳 姿势推荐：湖边张开双臂（自由感）、森林中仰望（森系感）、花海中转圈（动态感）、毡房前捧奶茶（生活感）</div>
-      
-    <div style="margin-top:10px;padding-top:10px;border-top:1px dashed rgba(136,14,79,.2);">
-      <div style="font-size:.85em;font-weight:700;color:#880e4f;margin-bottom:8px;">📷 参考样片</div>
-      <div class="gallery-grid" style="grid-template-columns:1fr 1fr;gap:8px;">
-        <div class="gallery-card" style="box-shadow:0 1px 4px rgba(0,0,0,.08);" onclick="openGallery('天山大峡谷', '', '雪山、森林、湖泊、草原四重景观。衣着：白色/红色长裙+牛仔外套。姿势：湖边张开双臂、森林中仰望、花海中转圈。')">
-          <div class="gallery-thumb placeholder" style="height:100px;font-size:.8em;">🖼️ 暂无案例</div>
-          <div class="gallery-info" style="padding:8px 10px 10px;">
-            <div class="gallery-name" style="font-size:.85em;">天山大峡谷</div>
-            <div class="gallery-tag"><span class="dot"></span> 待补充</div>
-          </div>
-        </div>
       </div>
-    </div>
-  </div>
     </div>
 
     <div class="t-item">
@@ -2121,7 +1995,7 @@
         <a class="nav-link" href="https://ditu.amap.com/search?query=红山公园乌鲁木齐" target="_blank">🗺️ 高德导航</a>
       </div>
       <div class="photo-guide">
-        <h5>📸 打卡案例 & 样片</h5>
+        <h5>📸 拍照指南</h5>
         <ul class="spot-list">
           <li>红山塔：标志性建筑，仰拍塔身+蓝天</li>
           <li>远眺楼：俯瞰乌鲁木齐全貌，城市风光</li>
@@ -2130,20 +2004,7 @@
         </ul>
         <div class="outfit">👗 衣着推荐：休闲舒适风（T恤+牛仔裤），配亮色围巾/帽子</div>
         <div class="pose">🤳 姿势推荐：红山塔前合影（打卡感）、远眺楼俯瞰（大气感）、红墙前回眸（文艺感）、山顶张开双臂（自由感）</div>
-      
-    <div style="margin-top:10px;padding-top:10px;border-top:1px dashed rgba(136,14,79,.2);">
-      <div style="font-size:.85em;font-weight:700;color:#880e4f;margin-bottom:8px;">📷 参考样片</div>
-      <div class="gallery-grid" style="grid-template-columns:1fr 1fr;gap:8px;">
-        <div class="gallery-card" style="box-shadow:0 1px 4px rgba(0,0,0,.08);" onclick="openGallery('红山公园', '', '乌鲁木齐地标，登顶俯瞰全城。衣着：休闲舒适风+亮色围巾。姿势：红山塔前合影、远眺楼俯瞰、山顶张开双臂。')">
-          <div class="gallery-thumb placeholder" style="height:100px;font-size:.8em;">🖼️ 暂无案例</div>
-          <div class="gallery-info" style="padding:8px 10px 10px;">
-            <div class="gallery-name" style="font-size:.85em;">红山公园</div>
-            <div class="gallery-tag"><span class="dot"></span> 待补充</div>
-          </div>
-        </div>
       </div>
-    </div>
-  </div>
     </div>
 
     <div class="t-item">
@@ -2219,7 +2080,14 @@
   <div class="card-title">Day 11 | 8.24 乌鲁木齐→上海</div>
   <div class="badge-wrap">
     <span class="badge b-time">⏱️ 返程日</span>
-    <span class="badge b-nav">🗺️ 晚8:20起飞</span>
+    <span class="badge b-nav">🗺️ ✈️ 返程日</span>
+  </div>
+  <!-- 今日路线概览 -->
+  <div style="background:linear-gradient(135deg,#e3f2fd,#bbdefb);border-radius:10px;padding:12px 14px;margin:10px 0 14px;border-left:4px solid var(--primary);">
+    <div style="font-size:.8em;font-weight:700;color:var(--primary);margin-bottom:6px;">📍 今日路线</div>
+    <div style="font-size:.78em;color:var(--text);line-height:1.8;">
+      🍜 09:00 早餐 → 🛍️ 10:30 最后补货 → 🍜 12:00 告别午餐 → ✈️ 14:00 前往机场 → ✈️ 20:20 起飞
+    </div>
   </div>
   <div class="timeline">
     <div class="t-item">
@@ -2316,8 +2184,8 @@
 <!-- ===== 照片墙版块 ===== -->
 <div class="section-content hidden" id="gallery">
 <div class="card">
-  <div class="card-title">📷 全部景点拍照案例（平铺视图）</div>
-  <p style="font-size:.85em;color:var(--muted);margin-bottom:16px;">此处为全部景点平铺视图，已按景点融入「日程」页面中。点击任意卡片查看该景点的拍照参考案例，绿色圆点表示已有样片。</p>
+  <div class="card-title">📷 景点拍照案例墙</div>
+  <p style="font-size:.85em;color:var(--muted);margin-bottom:16px;">点击任意卡片查看该景点的拍照参考案例，绿色圆点表示已有样片。</p>
 
   <div class="gallery-grid">
   <!-- 以下为空，等你后期补图 -->
