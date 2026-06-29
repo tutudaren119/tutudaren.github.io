@@ -242,6 +242,29 @@
     -webkit-overflow-scrolling:touch;scrollbar-width:none}
   .photo-scroll::-webkit-scrollbar{display:none}
   .photo-item{flex:0 0 auto;width:200px}
+  .photo-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+    margin:10px 0;
+  }
+  .photo-grid img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+    border-radius:10px;
+    display:block;
+  }
+  .photo-full{
+    margin:10px 0;
+  }
+  .photo-full img{
+    width:100%;
+    height:auto;
+    border-radius:12px;
+    display:block;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+  }
   .photo-item img{width:100%;height:150px;object-fit:cover;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.1)}
   .photo-cap{font-size:.72em;color:var(--muted);text-align:center;margin-top:4px;font-style:italic}
   .photo-tip{background:#f8f9ff;border-left:3px solid #7c4dff;padding:10px 12px;
@@ -524,6 +547,34 @@
   /* 页脚 */
   .footer{text-align:center;padding:30px 20px;color:var(--muted);font-size:.8em}
 
+  /* 景点快捷入口 */
+  .quick-links-section{margin-top:16px}
+  .quick-links-title{font-size:.8em;font-weight:700;color:var(--primary);margin-bottom:10px}
+  .quick-links-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .quick-link{display:flex;align-items:center;gap:8px;padding:10px 12px;border-radius:10px;cursor:pointer;font-size:.82em;text-decoration:none;transition:transform .15s}
+  .quick-link:active{transform:scale(.96)}
+  .quick-link span{font-size:1.1em}
+  .quick-link i{margin-left:auto;font-size:.7em;font-style:normal;padding:2px 6px;border-radius:8px;background:rgba(255,255,255,.6)}
+  .quick-link.wide{grid-column:1 / -1}
+  .quick-link.blue{background:linear-gradient(135deg,#e3f2fd,#bbdefb);border:1px solid #90caf9;color:#1565c0}
+  .quick-link.blue i{color:#1976d2}
+  .quick-link.orange{background:linear-gradient(135deg,#fff3e0,#ffe0b2);border:1px solid #ffcc80;color:#e65100}
+  .quick-link.orange i{color:#ef6c00}
+  .quick-link.green{background:linear-gradient(135deg,#e8f5e9,#c8e6c9);border:1px solid #a5d6a7;color:#2e7d32}
+  .quick-link.green i{color:#388e3c}
+  .quick-link.teal{background:linear-gradient(135deg,#e0f2f1,#b2dfdb);border:1px solid #80cbc4;color:#00695c}
+  .quick-link.teal i{color:#00796b}
+  .quick-link.amber{background:linear-gradient(135deg,#fff8e1,#ffecb3);border:1px solid #ffe082;color:#f57f17}
+  .quick-link.amber i{color:#f9a825}
+  .quick-link.indigo{background:linear-gradient(135deg,#e8eaf6,#c5cae9);border:1px solid #9fa8da;color:#283593}
+  .quick-link.indigo i{color:#303f9f}
+  .quick-link.pink{background:linear-gradient(135deg,#fce4ec,#f8bbd0);border:1px solid #f48fb1;color:#c62828}
+  .quick-link.pink i{color:#d32f2f}
+  .quick-link.lime{background:linear-gradient(135deg,#f1f8e9,#dcedc8);border:1px solid #c5e1a5;color:#558b2f}
+  .quick-link.lime i{color:#689f38}
+  .quick-link.brown{background:linear-gradient(135deg,#efebe9,#d7ccc8);border:1px solid #bcaaa4;color:#4e342e}
+  .quick-link.brown i{color:#5d4037}
+
   /* 隐藏元素 */
   .hidden{display:none !important}
 
@@ -619,6 +670,22 @@
     <tr><td>Day 10</td><td>8.23 周日</td><td>乌鲁木齐市区深度游</td><td>南湖美仑酒店</td><td>市内</td></tr>
     <tr><td>Day 11</td><td>8.24 周一</td><td>乌鲁木齐送机→上海</td><td>—</td><td>飞行5h</td></tr>
   </table>
+  </div>
+
+  <!-- 景点快捷入口 -->
+  <div class="quick-links-section">
+    <div class="quick-links-title">📍 快速跳转</div>
+    <div class="quick-links-grid">
+      <a class="quick-link blue" onclick="showSection('days');setTimeout(function(){scrollToDay(1);},100);"><span>🕌</span>乌鲁木齐<i>D1</i></a>
+      <a class="quick-link orange" onclick="showSection('days');setTimeout(function(){scrollToDay(2);},100);"><span>🏜️</span>阿勒泰<i>D2</i></a>
+      <a class="quick-link green" onclick="showSection('days');setTimeout(function(){scrollToDay(3);},100);"><span>🏔️</span>禾木村<i>D3</i></a>
+      <a class="quick-link teal" onclick="showSection('days');setTimeout(function(){scrollToDay(4);},100);"><span>🌊</span>喀纳斯<i>D4</i></a>
+      <a class="quick-link amber" onclick="showSection('days');setTimeout(function(){scrollToDay(5);},100);"><span>🌄</span>魔鬼城<i>D5</i></a>
+      <a class="quick-link indigo" onclick="showSection('days');setTimeout(function(){scrollToDay(6);},100);"><span>💙</span>赛里木湖<i>D6</i></a>
+      <a class="quick-link pink" onclick="showSection('days');setTimeout(function(){scrollToDay(7);},100);"><span>🏘️</span>伊宁<i>D7</i></a>
+      <a class="quick-link lime" onclick="showSection('days');setTimeout(function(){scrollToDay(8);},100);"><span>🌿</span>那拉提<i>D8</i></a>
+      <a class="quick-link brown wide" onclick="showSection('days');setTimeout(function(){scrollToDay(9);},100);"><span>🛣️</span>独库公路<i>D9</i></a>
+    </div>
   </div>
 </div>
 </div>
@@ -771,7 +838,8 @@
         <p>⏰ 开放时间：大巴扎全天，观光塔10:00-20:00，店铺9:30-22:00</p>
         <a class="nav-link" href="https://ditu.amap.com/search?query=新疆国际大巴扎" target="_blank">🗺️ 高德导航</a>
       </div>
-      <div class="photo-guide">
+        
+        <div class="photo-guide">
         <h5>📸 拍照指南</h5>
         <ul class="spot-list">
           <li>4号楼东门"演艺大剧院"门头：网红机位，蹲下仰拍与人物同框</li>
@@ -884,7 +952,8 @@
         <p>📸 <strong>指路牌</strong>：沙漠公路标志性路牌，拍公路风大片</p>
         <p>⏰ 建议停留30-40分钟</p>
       </div>
-      <div class="photo-guide">
+        
+        <div class="photo-guide">
         <h5>📸 打卡案例 & 样片</h5>
         <ul class="spot-list">
           <li>小土丘登顶：俯瞰沙漠全景，视野开阔</li>
@@ -1110,13 +1179,15 @@
         <div style="font-weight:700;color:#E65100;margin-bottom:6px;">🚌 村内公交 · 随上随下</div>
         <div>1路/3路循环运行，站点覆盖桥头、白桦林、美食街、换乘中心等，每班约10分钟。</div>
         <div style="margin-top:6px;color:#BF360C;">💡 建议买当日不限次乘车票，各站点随时上下。</div>
-      </div>
+      
+</div>
 
       <div class="spot-card">
         <h5>📍 ① 哈登观景台（15:30-16:30）</h5>
         <p><strong>🚌 交通：</strong>酒店步行至最近站点 → 乘<strong>1路/3路公交</strong>，1站直达<strong>【桥头站】</strong>下车（车程3分钟）。</p>
         <p>下车点就是<strong>禾木桥</strong>，过桥后走村北<strong>平缓木栈道上山</strong>，30分钟抵达哈登观景台。骑马也可，约15分钟。</p>
         <p>⏰ 建议15:30出发，下午光线好、游客少，先看全村全貌。不用挤日落时段，把时间留给傍晚喂老鹰。</p>
+        
         <div class="photo-guide">
           <h5>📸 拍照指南</h5>
           <ul class="spot-list">
@@ -1127,6 +1198,13 @@
           <div class="outfit">👗 衣着推荐：暖色调外套（焦糖/姜黄），下午阳光下更出彩</div>
           <div class="pose">🤳 姿势推荐：张开双臂（大气感）、背影望村（沉思感）、侧脸逆光（氛围感）</div>
         </div>
+      <div class="spot-card">
+        <h5>📍 云霄峰（可选·缆车往返约2h）</h5>
+        <p>从换乘中心乘专线车至吉克普林索道站，缆车约25分钟登顶（198元/人）。海拔2800m，可俯瞰禾木全景+阿尔泰山脉。</p>
+        <p>⏰ 如时间充裕可加此站，建议8:00-9:00或18:00后去，避开人流。</p>
+        <div style="margin:10px 0;"><img src="hemu-07-yunxiao-lookup.jpg" alt="云霄峰仰拍" style="width:100%;height:auto;border-radius:12px;display:block;box-shadow:0 2px 8px rgba(0,0,0,.08);"><div style="font-size:.72em;color:var(--muted);text-align:center;margin-top:4px;font-style:italic;">📷 拍照参考</div></div>
+        <div style="margin:10px 0;"><img src="hemu-08-yunxiao-overlook.jpg" alt="云霄峰俯拍" style="width:100%;height:auto;border-radius:12px;display:block;box-shadow:0 2px 8px rgba(0,0,0,.08);"><div style="font-size:.72em;color:var(--muted);text-align:center;margin-top:4px;font-style:italic;">📷 拍照参考</div></div>
+      </div>
       </div>
 
       <div class="spot-card">
@@ -1136,6 +1214,8 @@
         <p>🏖️ <strong>河滩</strong>：桥下浅滩，木栈道直达，可捡鹅卵石、打水漂。</p>
         <p>🦅 <strong>喂老鹰</strong>：桥附近牧民召唤老鹰，18:00左右鹰最多最活跃，提前占好位置。</p>
         <p style="background:#E3F2FD;border-radius:8px;padding:8px 12px;margin:8px 0;font-size:.82em;">🚌 <strong>深入白桦林：</strong>桥头站原地等<strong>3路公交</strong>，坐1站到<strong>【白桦林站】</strong>下车，逛平缓水岸木栈道；逛完步行回桥头站（5分钟）。</p>
+        <div style="margin:10px 0;"><img src="hemu-04-riverside.jpg" alt="河边机位" style="width:100%;height:auto;border-radius:12px;display:block;box-shadow:0 2px 8px rgba(0,0,0,.08);"><div style="font-size:.72em;color:var(--muted);text-align:center;margin-top:4px;font-style:italic;">📷 拍照参考</div></div>
+        <div style="margin:10px 0;"><img src="hemu-03-birch-forest.jpg" alt="白桦林路线" style="width:100%;height:auto;border-radius:12px;display:block;box-shadow:0 2px 8px rgba(0,0,0,.08);"><div style="font-size:.72em;color:var(--muted);text-align:center;margin-top:4px;font-style:italic;">📷 拍照参考</div></div>
         <div class="photo-guide">
           <h5>📸 拍照指南</h5>
           <ul class="spot-list">
@@ -1154,6 +1234,8 @@
         <p><strong>🚌 交通：</strong><strong>桥头站</strong>乘坐<strong>3路公交</strong>，1站到<strong>【美食街站】</strong>下车，即到老村木屋主街。</p>
         <p>原木小屋、炊烟袅袅、野花环绕，<strong>最出片的街区</strong>。沿主街慢走，逛逛小店，喝奶茶休息。</p>
         <p>🍵 可买手工奶制品、借木屋门口拍照（征得主人同意）。逛完美食街附近直接去吃晚饭。</p>
+        <div style="margin:10px 0;"><img src="hemu-06-natural-store.jpg" alt="自然居民商店" style="width:100%;height:auto;border-radius:12px;display:block;box-shadow:0 2px 8px rgba(0,0,0,.08);"><div style="font-size:.72em;color:var(--muted);text-align:center;margin-top:4px;font-style:italic;">📷 拍照参考</div></div>
+        <div style="margin:10px 0;"><img src="hemu-05-fence-pose.jpg" alt="趴木桩" style="width:100%;height:auto;border-radius:12px;display:block;box-shadow:0 2px 8px rgba(0,0,0,.08);"><div style="font-size:.72em;color:var(--muted);text-align:center;margin-top:4px;font-style:italic;">📷 拍照参考</div></div>
         <div class="photo-guide">
           <h5>📸 拍照指南</h5>
           <ul class="spot-list">
@@ -1165,7 +1247,13 @@
           <div class="pose">🤳 姿势推荐：小巷中行走（自然感）、门前捧奶茶（生活感）、侧身闻花（柔美感）</div>
         </div>
       </div>
-    </div>
+    <div class="spot-card">
+        <h5>📍 哈熊沟站（额外打卡点）</h5>
+        <p>老村区间车<strong>第6站</strong>，下车后面前就是大片草地，可躺可坐，背景是雪山+木屋群全景。</p>
+        <p>🚌 从美食街站乘3路公交，方向往换乘中心，坐3站到哈熊沟站下车。</p>
+        <div style="margin:10px 0;"><img src="hemu-02-haxionggou.jpg" alt="哈熊沟站" style="width:100%;height:auto;border-radius:12px;display:block;box-shadow:0 2px 8px rgba(0,0,0,.08);"><div style="font-size:.72em;color:var(--muted);text-align:center;margin-top:4px;font-style:italic;">📷 拍照参考</div></div>
+      </div>
+      </div>
 
     <div class="t-item">
       <div class="t-time"><span class="icon">🍜</span> 20:00-21:00 晚餐（禾木村内）</div>
@@ -1228,7 +1316,7 @@
   <div style="background:linear-gradient(135deg,#e3f2fd,#bbdefb);border-radius:10px;padding:12px 14px;margin:10px 0 14px;border-left:4px solid var(--primary);">
     <div style="font-size:.8em;font-weight:700;color:var(--primary);margin-bottom:6px;">📍 今日路线</div>
     <div style="font-size:.78em;color:var(--text);line-height:1.8;">
-      🌅 06:00 禾木晨雾 → 🍜 08:30 早餐 → 🚗 10:00 前往喀纳斯 → 🏞️ 12:00 喀纳斯湖 → 📸 15:00 观鱼台 → 🌅 19:00 湖边日落
+      🌅 06:00 禾木晨雾 → ⛰️ 07:30 云霄峰看四国（可选） → 🍜 08:30 早餐 → 🚗 10:00 前往喀纳斯 → 🏞️ 12:00 喀纳斯湖 → 📸 15:00 观鱼台 → 🌅 19:00 湖边日落
     </div>
   </div>
   <div class="timeline">
@@ -1250,6 +1338,30 @@
         </ul>
         <div class="outfit">👗 衣着推荐：厚外套+围巾，清晨仅6°C；可内搭亮色毛衣，脱外套拍人像</div>
         <div class="pose">🤳 姿势推荐：观景台俯拍村庄（大气感）、晨雾中行走（仙气感）、逆光剪影（艺术感）</div>
+      </div>
+    </div>
+
+    <div class="t-item">
+      <div class="t-time"><span class="icon">⛰️</span> 07:30-09:00 云霄峰看四国（可选）</div>
+      <p>看完晨雾后，如有体力可前往<strong>云霄峰</strong>（缆车198元/人，约25分钟登顶2800m）。山顶可俯瞰禾木全景+阿尔泰山脉，天气晴好时能看到<strong>中俄蒙哈四国交界</strong>。</p>
+      <div class="spot-card">
+        <h5>📍 云霄峰 · 缆车登顶</h5>
+        <p>🚡 缆车：吉克普林索道站 → 云霄峰顶，单程约25分钟</p>
+        <p>🎫 票价：198元/人（往返）</p>
+        <p>⏰ 建议7:30出发，9:00前返回吃早餐，不耽误10:00出发去喀纳斯</p>
+        <p>🌄 山顶可看四国交界碑+玛尼堆， panoramic全景震撼</p>
+        <a class="nav-link" href="https://ditu.amap.com/search?query=吉克普林索道站" target="_blank">🗺️ 高德导航</a>
+      </div>
+      <div class="photo-guide">
+        <h5>📸 拍照指南</h5>
+        <ul class="spot-list">
+          <li>仰拍伸手触云：低角度仰拍，穿亮色上衣在蓝天背景下超抢眼</li>
+          <li>玛尼堆俯拍：山顶玛尼堆石塔+群山俯瞰，标志性机位</li>
+          <li>四国交界碑：打卡纪念照，背景群山延绵</li>
+          <li>云海日出：如运气好可见云海，人物剪影+云海超壮观</li>
+        </ul>
+        <div class="outfit">👗 衣着推荐：暖色调厚外套（山顶风大+清晨低温），红/黄色系在晨光下更出彩</div>
+        <div class="pose">🤳 姿势推荐：张开双臂拥抱群山（大气感）、背影望远方（沉思感）、仰拍伸手触云（活力感）</div>
       </div>
     </div>
 
@@ -2408,7 +2520,7 @@
 ], '禾木村深度打卡指南：① 阿禾公路望禾观景台拍公路全景 ② 云霄峰缆车198元登顶2800m俯瞰群山 ③ 禾木桥左手边木栈道下河边拍框景 ④ 桥头乘3路到白桦林站走平缓水岸栈道 ⑤ 老村木围栏趴桩子超松弛 ⑥ 哈熊沟站下车躺草地拍雪山木屋全景 ⑦ 哈登栈道途中木栅栏+大朵白云仰拍。衣着：暖色调毛衣+长裙/白色毛衣+红围巾点睛。')">
       <img class="gallery-thumb" src="hemu-01-wanghe-viewpoint.jpg" alt="禾木村">
       <div class="gallery-info">
-        <div class="gallery-name">禾木村</div>
+        <div class="gallery-name">望禾观景台·禾木桥·白桦林·老村木屋·哈熊沟·云霄峰</div>
         <div class="gallery-tag"><span class="dot has-img"></span> 已有样片 · Day 3</div>
       </div>
     </div>
@@ -2430,11 +2542,17 @@
       </div>
     </div>
 
-    <div class="gallery-card" onclick="openGallery('观鱼台', '', '1068级台阶登顶，俯瞰喀纳斯湖全景，寻找湖怪传说。衣着：运动休闲风+亮色外套。姿势：山顶张开双臂、台阶上回头、坐平台边缘。')">
-      <div class="gallery-thumb placeholder">🖼️ 暂无案例</div>
+    <div class="gallery-card gallery-card-multi" onclick="openGallery('观鱼台', [
+  {url:'guanyutai-01.jpg', title:'观鱼台·木栏远眺', desc:'观鱼台上，人物站在木围栏旁，背景雪山全景，标志性机位'},
+  {url:'guanyutai-02.jpg', title:'观景台·木板座位', desc:'从观鱼台乘车到游客中心再前往喀纳斯湖，下车点不远的观景台木板上，靠右侧坐下，从台下拍摄'},
+  {url:'guanyutai-03.jpg', title:'湖边石头·面朝雪山', desc:'喀纳斯湖边的石头上，面朝雪山，背影杀机位'},
+  {url:'guanyutai-04.jpg', title:'枯树倚靠·湖边', desc:'喀纳斯湖木栈道途径地，靠湖边枯树坐着，背景湖水+森林'},
+  {url:'guanyutai-05.jpg', title:'湖边石头·碧水', desc:'湖边石头上坐着，手扶草帽，碧绿湖水为背景'}
+], '登1068级台阶登顶，俯瞰喀纳斯湖S弯全景。衣着：运动休闲风+亮色外套。姿势：木栏旁张开双臂、台阶上回头、湖边石头面朝雪山。')">
+      <img class="gallery-thumb" src="guanyutai-01.jpg" alt="观鱼台">
       <div class="gallery-info">
         <div class="gallery-name">观鱼台</div>
-        <div class="gallery-tag"><span class="dot"></span> 待补充 · Day 4</div>
+        <div class="gallery-tag"><span class="dot has-img"></span> 已有样片 · Day 4</div>
       </div>
     </div>
 
